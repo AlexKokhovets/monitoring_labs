@@ -4,7 +4,7 @@ sudo setenforce 0
 
 sudo systemctl stop firewalld
 
-sudo DD_AGENT_MAJOR_VERSION=7 DD_API_KEY=96d6784d8fdd8ef20a543fe52eeacde8 DD_SITE="datadoghq.com" bash -c "$(curl -L https://s3.amazonaws.com/dd-agent/scripts/install_script.sh)"
+sudo DD_AGENT_MAJOR_VERSION=7 DD_API_KEY= DD_SITE="datadoghq.com" bash -c "$(curl -L https://s3.amazonaws.com/dd-agent/scripts/install_script.sh)"
 
 sudo mkdir /etc/datadog-agent/conf.d/logs.d
 cat << EOF | sudo tee /etc/datadog-agent/conf.d/logs.d/conf.yaml
